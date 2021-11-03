@@ -1,0 +1,450 @@
+// CSC 365
+// Lab 1-a test suite
+// Each valid search begins with printing '--{} Results--' where {} is the type of search
+//E2: invalid argument
+//E3: incorrect amount of arguments
+
+
+//// R4 TESTS ////
+// TC-1
+// R3, R4
+// Short Command, existing student
+// expected output: COMO, ZANDRA, 4, 112, CHIONCHIO, PERLA
+S: COMO
+
+// TC-2
+// R3, R4
+// long Command, existing student
+// expected output: COMO, ZANDRA, 4, 112, CHIONCHIO, PERLA
+Student: COMO
+
+// TC-3
+// R3, R4
+// Short Command, non-existing student
+// expected output: No Results Found
+S: DUCKSAUCE
+
+// TC-4
+// R3, R4, E2
+// Short Command, existing student, invalid argument
+// expected output: Invalid argument: 'V'
+S: COMO V
+
+// TC-5
+// R3, R4, E3
+// Short Command, not enough arguments
+// expected output: Please Include Student Last Name and Optional B[us] flag
+S:
+
+
+//// R5 TESTS ////
+// TC-6
+// R3, R5
+// Short Command, existing student, short bus option
+// expected output: COMO, ZANDRA, 53
+S: COMO B
+
+// TC-7
+// R3, R5
+// long Command, existing student, short bus option
+// expected output: COMO, ZANDRA, 53
+Student: COMO B
+
+// TC-8
+// R3, R5
+// Short Command, existing student, long bus option
+// expected output: COMO, ZANDRA, 53
+S: COMO Bus
+
+// TC-9
+// R3, R5, E3
+// Short Command, too may arguments
+// expected output: Invalid Arguments Added
+S: COMO B L
+
+
+//// R6 TESTS ////
+// TC-10
+// R3, R6
+// Short Command, existing teacher
+// expected output: LIBRANDI, TODD
+//                  HAVIR, BOBBIE
+//                  SARAO, DIEDRA
+//                  VANCOTT, MIKE
+//                  WICINSKY, TERESE
+//                  KOZOLA, BUSTER
+//                  MULLINGS, LEIGHANN
+//                  BUSSMANN, BILLY
+//                  BERBES, DICK
+//                  MULGREW, RANDELL
+//                  TOWLEY, LANE
+T: HAMER
+
+// TC-11
+// R3, R6
+// Long Command, existing teacher
+// expected output: LIBRANDI, TODD
+//                  HAVIR, BOBBIE
+//                  SARAO, DIEDRA
+//                  VANCOTT, MIKE
+//                  WICINSKY, TERESE
+//                  KOZOLA, BUSTER
+//                  MULLINGS, LEIGHANN
+//                  BUSSMANN, BILLY
+//                  BERBES, DICK
+//                  MULGREW, RANDELL
+//                  TOWLEY, LANE
+Teacher: HAMER
+
+// TC-12
+// R3, R6
+// Short Command, non-existing teacher
+// expected output: No Results Found
+T: DUCKSAUCE
+
+// TC-13
+// R3, R6, E3
+// Short Command, existing teacher, too many arguments
+// expected output: Invalid Arguments Added
+T: HAMER 4
+
+
+//// R7 TESTS ////
+// TC-14
+// R3, R7
+// Short Command, existing grade
+// expected output: CORKER, CARTER
+//                  IMMERMAN, DEVIN
+//                  RAPOSE, ALONZO
+//                  WORBINGTON, DEEDRA
+//                  OGAS, ERVIN
+//                  SPANICEK, KENDRA
+//                  GUICE, CODI
+//                  GLOR, HUNG
+//                  GUM, NOAH
+//                  MASSART, ELDON
+//                  NOVICK, ROLLAND
+//                  DURAND, CARLEE
+//                  BEX, TAMESHA
+//                  DELUNA, KRYSTAL
+//                  COMO, ZANDRA
+G: 4
+
+// TC-15
+// R3, R7
+// Long Command, existing grade
+// expected output: CORKER, CARTER
+//                  IMMERMAN, DEVIN
+//                  RAPOSE, ALONZO
+//                  WORBINGTON, DEEDRA
+//                  OGAS, ERVIN
+//                  SPANICEK, KENDRA
+//                  GUICE, CODI
+//                  GLOR, HUNG
+//                  GUM, NOAH
+//                  MASSART, ELDON
+//                  NOVICK, ROLLAND
+//                  DURAND, CARLEE
+//                  BEX, TAMESHA
+//                  DELUNA, KRYSTAL
+//                  COMO, ZANDRA
+Grade: 4
+
+// TC-16
+// R3, R7
+// Short Command, non-existing grade
+// expected output: No Results Found
+G: 17
+
+// TC-17
+// R3, R7, E2
+// Short Command, non-valid grade
+// expected output: Grade Search Error: invalid literal for int() with base 10: 'A'
+G: A
+
+// TC-18
+// R3, R7, E3
+// Short Command, valid grade, not enough
+// expected output: Please Include Grade Level and optional High/Low Value
+G:
+
+
+//// R8 TESTS ////
+// TC-19
+// R3, R8
+// Short Command, existing bus route
+// expected output: CORKER, CARTER, 4, 105
+//                  WORBINGTON, DEEDRA, 4, 112
+//                  CIGANEK, MANIE, 3, 107
+//                  SPANICEK, KENDRA, 4, 112
+//                  CLECKLER, FLOY, 6, 109
+//                  WICINSKY, TERESE, 2, 108
+//                  LINHART, LELA, 3, 107
+//                  DELUNA, KRYSTAL, 4, 112
+//                  COMO, ZANDRA, 4, 112
+B: 53
+
+// TC-20
+// R3, R8
+// Long Command, existing bus route
+// expected output: CORKER, CARTER, 4, 105
+//                  WORBINGTON, DEEDRA, 4, 112
+//                  CIGANEK, MANIE, 3, 107
+//                  SPANICEK, KENDRA, 4, 112
+//                  CLECKLER, FLOY, 6, 109
+//                  WICINSKY, TERESE, 2, 108
+//                  LINHART, LELA, 3, 107
+//                  DELUNA, KRYSTAL, 4, 112
+//                  COMO, ZANDRA, 4, 112
+Bus: 53
+
+// TC-21
+// R3, R8
+// Short Command, non-existing bus route
+// expected output: No Results Found
+B: 1
+
+// TC-22
+// R3, R8, E2
+// Short Command, non-valid bus route
+// expected output: Bus Error: invalid literal for int() with base 10: 'V'
+B: V
+
+// TC-23
+// R3, R8, E3
+// Short Command, valid bus, too many arguments
+// expected output: Invalid Arguments Added
+B: 53 53
+
+// TC-24
+// R3, R8, E3
+// Short Command, valid bus, not enough arguments
+// expected output: Please Include Bus Route
+B:
+
+
+//// R9 TESTS ////
+// TC-25
+// R3, R9
+// Short Command, High option
+// expected output: CORKER, CARTER, 3.12, HANTZ, JED, 53
+//                  RAPOSE, ALONZO, 3.12, HANTZ, JED, 51
+G: 4 H
+
+// TC-26
+// R3, R9
+// Short Command, Low option
+// expected output: IMMERMAN, DEVIN, 2.78, HANTZ, JED, 52
+G: 4 L
+
+// TC-27
+// R3, R9, E3
+// Short Command, Low option, to many arguments
+// expected output: Invalid Arguments Added
+G: 4 L L
+
+
+//// R10 TESTS ////
+// TC-28
+// R3, R10
+// Short Command, grade with students
+// expected output: 4, 2.95
+A: 4
+
+// TC-29
+// R3, R10
+// Long Command, grade with students
+// expected output: 4, 2.95
+Average: 4
+
+// TC-33
+// R3, R10
+// Short Command, grade with no students
+// expected output: 0, 0
+A: 0
+
+// TC-30
+// R3, R10, E2
+// Short Command, invalid class
+// expected output: GPA error: invalid literal for int() with base 10: 'V'
+A: V
+
+// TC-31
+// R3, R10, E3
+// Short Command, not enough arguments
+// expected output: Please Include Class
+A:
+
+// TC-32
+// R3, R10, E3
+// Short Command, too many arguments
+// expected output: Invalid Arguments Added
+A: 4 4
+
+
+//// R11 TESTS ////
+// TC-33
+// R3, R11
+// Short Command
+// expected output: 0: 0
+//                  1: 2
+//                  2: 13
+//                  3: 9
+//                  4: 15
+//                  5: 0
+//                  6: 21
+I:
+
+// TC-34
+// R3, R11
+// Long Command
+// expected output: 0: 0
+//                  1: 2
+//                  2: 13
+//                  3: 9
+//                  4: 15
+//                  5: 0
+//                  6: 21
+Info:
+
+// TC-35
+// R3, R11, E3
+// short Command, too many arguments
+// expected output: Invalid Arguments Added
+I: 4
+
+
+//// R12 TESTS ////
+// TC-36
+// R3, R12
+// Short Command
+// expected output: Exiting Search...
+Q:
+
+// TC-37
+// R3, R12
+// Long Command
+// expected output: Exiting Search...
+Quit:
+
+//// NR4 TESTS ////
+// TC-38
+// NR4
+// Short Command
+// expected output: Classroom 101: 1
+//                  Classroom 102: 5
+//                  Classroom 103: 2
+//                  Classroom 104: 2
+//                  Classroom 105: 6
+//                  Classroom 106: 2
+//                  Classroom 107: 7
+//                  Classroom 108: 11
+//                  Classroom 109: 5
+//                  Classroom 110: 2
+//                  Classroom 111: 9
+//                  Classroom 112: 8
+E:
+
+// TC-39
+// NR4
+// Long Command
+// expected output: Classroom 101: 1
+//                  Classroom 102: 5
+//                  Classroom 103: 2
+//                  Classroom 104: 2
+//                  Classroom 105: 6
+//                  Classroom 106: 2
+//                  Classroom 107: 7
+//                  Classroom 108: 11
+//                  Classroom 109: 5
+//                  Classroom 110: 2
+//                  Classroom 111: 9
+//                  Classroom 112: 8
+Enroll:
+
+// TC-40
+// NR1
+// Short Command
+// expected output: RACANELLO, NOEL
+//                  CORONADO, DIMPLE
+//                  BOYTER, WAN
+//                  KEMERER, ROSETTA
+//                  DEMARTINI, DEWAYNE
+C: 102
+
+// TC-41
+// NR1
+// Long Command
+// expected output: RACANELLO, NOEL
+//                  CORONADO, DIMPLE
+//                  BOYTER, WAN
+//                  KEMERER, ROSETTA
+//                  DEMARTINI, DEWAYNE
+Class: 102
+
+// TC-42
+// NR2
+// Long Command
+// expected output: KERBS, BENITO
+Class: 102 T
+
+// TC-42
+// NR2
+// Long Command
+// expected output: KERBS, BENITO
+C: 102 T
+
+// TC-43
+// NR3
+// Short Command
+// expected output: STEIB, GALE
+//                  HAMER, GAVIN
+G: 2 T
+
+// TC-44
+// NR3
+// Long Command
+// expected output: STEIB, GALE
+//                  HAMER, GAVIN
+Grade: 2 Teach
+
+// TC-45
+// Analytics
+// Short Command, Grade
+// expected output: Grade: 0, GPA: 0
+//                  Grade: 1, GPA: 3.0
+//                  Grade: 2, GPA: 2.95
+//                  Grade: 3, GPA: 3.05
+//                  Grade: 4, GPA: 2.95
+//                  Grade: 5, GPA: 0
+//                  Grade: 6, GPA: 2.98
+D: G
+
+// TC-46
+// Analytics
+// Short Command, Teacher
+// expected output: Teacher: ALPERT, GPA: 3.17
+//                  Teacher: BODZIONY, GPA: 3.09
+//                  Teacher: CHIONCHIO, GPA: 2.98
+//                  Teacher: COOL, GPA: 2.91
+//                  Teacher: FAFARD, GPA: 3.01
+//                  Teacher: FALKER, GPA: 3.0
+//                  Teacher: GAMBREL, GPA: 2.96
+//                  Teacher: HAMER, GPA: 2.95
+//                  Teacher: HANTZ, GPA: 2.91
+//                  Teacher: KERBS, GPA: 2.98
+//                  Teacher: NISTENDIRK, GPA: 2.96
+//                  Teacher: STEIB, GPA: 2.9
+D: T
+
+// TC-47
+// Analytics
+// Short Command, Bus
+// expected output: Bus: 0, GPA: 2.95
+//                  Bus: 51, GPA: 3.02
+//                  Bus: 52, GPA: 2.88
+//                  Bus: 53, GPA: 3.06
+//                  Bus: 54, GPA: 2.94
+//                  Bus: 55, GPA: 3.04
+//                  Bus: 56, GPA: 2.92
+D: B

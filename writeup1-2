@@ -1,0 +1,48 @@
+Dakin Oliver
+dsoliver@calpoly.edu
+CSC 365-01
+Lab 1b
+
+Programing Language: Python3
+                     Developed in windows
+                     Tested on ubuntu
+                     python collections used
+
+Data Structure Used: List of students, where each student is a python dictionary
+                     Fields for each student described below:
+                     'StLastName': string
+                     'StFirstName': string
+                     'Grade': int
+                     'Classroom': int
+                     'Bus': int
+                     'GPA': string (could be stored as a float)
+                     'TLastName': string
+                     'TFirstName' string
+
+                     List of teacher, where each teacher is a python dictionary
+                     'TLastName': string
+                     'TFirstName': string
+                     'Classroom': int
+
+Task Logging:
+    Classroom search (2hr)
+    Teachers by grade (.5hr)
+    Data analytics (2hr)
+
+Testing:
+    Combining teacher and student files correctly (1hr)
+    Classroom search Test (.5hr)
+    Teachers by grade (.25hr)
+    Data analytics (1hr)
+
+Additional Comments:
+    Program assumes that "list.txt" and "teachers.txt" are formatted correctly
+    Each search printout starts with "--{} Results--" where '{}' is the type of search
+    If a search returns nothing, "No Results Found" is printed
+    I an error is encountered, a printout of what search failed, and the error is printed.
+        Is able to continue with additional searches
+    Printout if not enough, to many, or invalid arguments are given
+    Data analytics only use short format for flags (T/G/B)
+
+    For combining teacher and student sets, program goes through each student, and changes
+    TLastName and TFirstName fields based on if the classroom matches a teacher

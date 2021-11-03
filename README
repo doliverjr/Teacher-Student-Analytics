@@ -1,0 +1,17 @@
+Required External Libraries: collections
+
+How to run: python3 schoolsearch.py
+
+New Commands:
+    C[lass]: <number> [T[each]]
+    E[nroll]:
+    D[ata]: T/G/B
+
+C[lass]: <number>   #prints all students in specified classroom
+C[lass]: <number> T #prints teacher of the specified classroom
+
+E[nroll]:           #prints number of students per classroom
+
+D[ata]: T           #prints gpa average by teacher
+D[ata]: G           #prints gpa average by grade
+D[ata]: B           #prints gpa average by bus route
